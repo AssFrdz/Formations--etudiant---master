@@ -20,7 +20,8 @@ switch ($action) {
         //Envoie des données du modèle
         $action = setUneFormation($cle,$value);
         //appel de la vue accueil
-        header('Location: ./index.php');
+        $formations = getLesFormations();
+        include "./views/accueil.php";
         break;
     }
     case 'connecter':{
